@@ -8,7 +8,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
-YOUTUBE_API_KEY = 'YOUR_YOUTUBE_API_KEY'  # Replace with your key
+YOUTUBE_API_KEY = 'AIzaSyCbpOpZNZAW49tRz5SWK7u5ydP8JOgyZsQ'  # Replace with your key
 SCOPES = ['https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/spreadsheets']
 
 def extract_email(description):
@@ -74,9 +74,9 @@ def upload_to_drive(file_path, as_google_sheet=False):
 
 # Streamlit UI
 st.title("YouTube Channel Scraper")
-keyword = st.text_input("Enter Keyword", "crime case")
+keyword = st.text_input("Crime story", "crime case")
 age_limit = st.selectbox("Channel Age (6)", ["All", "1", "2", "3", "6", "9", "12", "24"], index=0)
-sub_limit = st.selectbox("Max Subscribers", ["All", "1000", "5000", "10000", "50000", "100000"], index=0)
+sub_limit = st.selectbox("2000", ["All", "1000", "5000", "10000", "50000", "100000"], index=0)
 to_google_sheet = st.checkbox("Convert to Google Sheet (otherwise Excel on Drive)")
 
 if st.button("Start Scraping"):
